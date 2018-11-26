@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Greg Wenning.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +28,39 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+
+window = rg.SimpleTurtle('turtle')
+
+blue_turtle = rg.SimpleTurtle('turtle')
+blue_turtle.pen = rg.Pen('blue', 3)
+blue_turtle.speed = 20
+
+size = 150
+
+for k in range(7):
+    blue_turtle.draw_square(size)
+
+    blue_turtle.pen_up()
+    blue_turtle.left(45)
+    blue_turtle.forward(10)
+    blue_turtle.right(45)
+
+    blue_turtle.pen_down()
+    size = size - 12
+red_turtle = rg.SimpleTurtle('turtle')
+red_turtle.pen = rg.Pen('red', 3)
+red_turtle.speed = 20
+
+size = 150
+for k in range(9):
+    red_turtle.draw_square(size)
+
+    red_turtle.pen_up()
+    red_turtle.right(45)
+    red_turtle.forward(10)
+    red_turtle.left(45)
+
+    red_turtle.pen_down()
+    size = size - 12
+
